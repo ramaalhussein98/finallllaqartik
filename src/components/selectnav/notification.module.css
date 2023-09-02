@@ -1,0 +1,50 @@
+.circle {
+    background: #14b183;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+}
+
+
+
+
+.circle::before {
+    background-color: #14b183;
+    content: "";
+    display: table;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: pulse;
+    animation-duration: .9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        width: 7px;
+        height: 7px;
+        left: 0;
+        top: 0;
+    }
+
+    95% {
+        opacity: 0.1;
+        left: -10.5px;
+        top: -10.5px;
+        width: 28px;
+        height: 28px;
+    }
+
+    100% {
+        opacity: 0;
+        width: 7px;
+        height: 7px;
+        left: 0;
+        top: 0;
+    }
+}
